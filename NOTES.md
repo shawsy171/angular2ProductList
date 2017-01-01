@@ -1,0 +1,1 @@
+remember to add a gitingore for all the js files 
