@@ -3,8 +3,9 @@ import { IProduct } from './product';
 
 @Component({
     selector: 'pm-products',
-    templateUrl: 'app/products/product-list.component.html',
-    styleUrls: ['app/products/product-list.component.css']
+    moduleId: module.id,
+    templateUrl: 'product-list.component.html',
+    styleUrls: ['product-list.component.css']
 })
 export class ProductListComponent {
     pageTitle: string = 'Product List';
@@ -35,7 +36,11 @@ export class ProductListComponent {
         }
     ];
 
-    toggleImage(): void {
+    toggleImage (): void {
         this.showImage = !this.showImage;
     }
+
+    onRatingClicked (message: string) : void {
+        this.pageTitle = `Product List: ${message}`
+    } 
 }

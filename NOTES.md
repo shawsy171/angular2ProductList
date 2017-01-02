@@ -1,1 +1,1 @@
-remember to add a gitingore for all the js files 
+remember to add a gitingore for all the js files in app
