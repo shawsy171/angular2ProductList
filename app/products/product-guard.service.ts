@@ -1,10 +1,13 @@
-import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRoute } from '@angular/router';
+import { Injectable, Inject } from '@angular/core';
+import { CanActivate,  ActivatedRouteSnapshot, Router } from '@angular/router';
 
 
 export class ProductDetailGuard implements CanActivate {
 
-    canActivate (route: ActivatedRouteSnapshot ) : boolean {
+    constructor(@Inject(Router) private _router: Router) {
+    }
+
+    canActivate (route:  ActivatedRouteSnapshot ) : boolean {
 
         // console.log(ActivatedRoute);
         let id = +route.url[1].path;
