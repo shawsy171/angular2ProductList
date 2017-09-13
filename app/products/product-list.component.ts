@@ -25,7 +25,7 @@ export class ProductListComponent implements OnInit {
         this._productService.getProducts()
             .subscribe(
                 products => this.products = products,
-                error => this.errorMessage = <any>error)
+                error => this.errorMessage = <any>error);
     }
 
     toggleImage (): void {
@@ -33,6 +33,6 @@ export class ProductListComponent implements OnInit {
     }
 
     onRatingClicked (message: string) : void {
-        this.pageTitle = `Product List: ${message}`
+        this.pageTitle = `Product List: ${message}`;
     } 
 }
